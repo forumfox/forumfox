@@ -9,7 +9,7 @@ use App\Http\Controllers\LocaleController;
  */
 
 // Switch between the included languages
-Route::get('lang/{lang}', [LocaleController::class, 'change'])->name('locale.change');
+// Route::get('lang/{lang}', [LocaleController::class, 'change'])->name('locale.change');
 
 /*
  * Frontend Routes
