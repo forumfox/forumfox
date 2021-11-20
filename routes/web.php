@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\LocaleController;
+// use App\Http\Controllers\LocaleController;
 
 /*
  * Global Routes
@@ -14,7 +14,9 @@ use App\Http\Controllers\LocaleController;
 /*
  * Frontend Routes
  */
-Route::group(['as' => 'frontend.'], function () {
+Route::group([
+    'as' => 'frontend.',
+], function () {
     includeRouteFiles(__DIR__.'/frontend/');
 });
 
@@ -23,6 +25,10 @@ Route::group(['as' => 'frontend.'], function () {
  *
  * These routes can only be accessed by users with type `admin`
  */
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
+Route::group([
+    'prefix' => 'admin',
+    'as' => 'admin.',
+    'middleware' => 'admin',
+], function () {
     includeRouteFiles(__DIR__.'/backend/');
 });
